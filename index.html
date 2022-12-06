@@ -6,26 +6,57 @@
   <title>Bug Invaders</title>
   <style>
     canvas {
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: solid black;
-    box-shadow: black 0px 10px 30px 20px;
-    border-radius: 10px;
-    
-}
-    body {
-        background-color: #333;
-        text-align: center;
+      display: block;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: solid black;
+      box-shadow: black 0px 10px 30px 20px;
+      border-radius: 10px;
+
     }
+
+    body {
+      background-color: #333;
+      text-align: center;
+    }
+
+    .characters {
+      padding-top: 40px;
+      border: #fff solid 1px;
+    }
+
+    .character {
+      background-color: #000;
+      border-radius: 50%;
+      cursor: pointer;
+      filter: grayscale();
+    }
+
+    .character:hover {
+      filter: grayscale(0);
+    }
+
+
   </style>
 
 </head>
 
+
+
 <body>
+
+  <div class="characters">
+    <img class="character" src="https://content.codecademy.com/courses/learn-phaser/Bug%20Invaders/codey.png" alt="">
+    <img class="character" src="/luigi-forward-100px.png" alt="">
+    <img class="character" src="/luigi-peace-50px.png" alt="">
+
+  </div>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
 
   <script defer src="game.js"></script>
