@@ -17,7 +17,7 @@ function preload() {
   );
   this.load.image(
     "codey",
-    "https://content.codecademy.com/courses/learn-phaser/Bug%20Invaders/codey.png"
+    "./luigi-forward-100px.png"
   );
   this.load.image(
     "bugPellet",
