@@ -96,7 +96,7 @@ function create() {
   }
 
   gameState.pelletsLoop = this.time.addEvent({
-    delay: 300,
+    delay: 1000,     //changes the speed of the enemies pellets
     callback: genPellet,
     callbackScope: this,
     loop: true,
@@ -167,7 +167,7 @@ function update() {
     if (Phaser.Input.Keyboard.JustDown(gameState.cursors.space)) {
       gameState.bugRepellent
         .create(gameState.player.x, gameState.player.y, "bugRepellent")
-        .setGravityY(-400);
+        .setGravityY(-400);   //sets speed of repellent(player 1's weapon) must be a min of -201 to move
     }
 
     // Add logic for winning condition and enemy movements below:

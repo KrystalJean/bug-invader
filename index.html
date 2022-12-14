@@ -7,7 +7,7 @@
   <style>
     canvas {
       display: block;
-      margin: 0;
+      margin-top: 50px;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -24,8 +24,7 @@
     }
 
     .characters {
-      padding-top: 40px;
-      border: #fff solid 1px;
+      padding-top: 20px;
     }
 
     .character {
@@ -33,10 +32,32 @@
       border-radius: 50%;
       cursor: pointer;
       filter: grayscale();
+      padding: 5px;
+      border: #999 solid 1px;
     }
 
     .character:hover {
       filter: grayscale(0);
+    }
+
+    .rainbow-text {
+      font-size: 40px;
+      background-image:
+        linear-gradient(to right, violet, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: move 300s linear infinite;
+
+    }
+    #rainbow-text {
+      text-shadow: #000 1px 1px;
+    }
+
+    @keyframes move {
+      to {
+        background-position: 4500vh;
+      }
     }
 
 
@@ -52,9 +73,8 @@
     <img class="character" src="https://content.codecademy.com/courses/learn-phaser/Bug%20Invaders/codey.png" alt="">
     <img class="character" src="/luigi-forward-100px.png" alt="">
     <img class="character" src="/luigi-peace-50px.png" alt="">
-
   </div>
-
+  <h1 class="rainbow-text" id="rainbow-text">Luigi's Lair of Locusts : Level 1</h1>
 
 
   <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
